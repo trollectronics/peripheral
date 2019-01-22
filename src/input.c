@@ -90,7 +90,7 @@ InputKeyboardEvent input_keyboard_event_pop() {
 		event.keysym = matrix_key[keycode & 0x3][matrix_cols[(keycode & 0x7F) >> 2]];
 	
 	if(event.keysym == INPUT_KEY_LSHIFT || event.keysym == INPUT_KEY_RSHIFT) {
-		keyboard.shift = !(keycode & 0x8);
+		keyboard.shift = !(keycode & 0x80);
 	}
 	
 	return event;
