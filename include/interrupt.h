@@ -9,7 +9,7 @@ void interrupt_isr_unhandled();
 void interrupt_isr_trampoline();
 
 void interrupt_init();
-void interrupt_perihperal_enable(uint32_t n, uint8_t priority);
+void interrupt_peripheral_enable(uint32_t n, uint8_t priority);
 void interrupt_register(int priority, void (h)(int));
 void interrupt_move_vector(void *addr);
 

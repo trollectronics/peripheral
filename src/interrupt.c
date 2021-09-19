@@ -18,7 +18,7 @@ void interrupt_init() {
 		int_vector[i] = interrupt_isr_trampoline;
 }
 
-void interrupt_perihperal_enable(uint32_t n, uint8_t priority) {
+void interrupt_peripheral_enable(uint32_t n, uint8_t priority) {
 	volatile uint32_t *interrupt_hw = (volatile uint32_t *) PERIPHERAL_INTERRUPT_BASE;
 	interrupt_hw[32 + n] = 0x0;
 	interrupt_hw[n] = priority & 0x7;
